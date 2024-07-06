@@ -70,7 +70,7 @@
    
    ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/1c8124cf-4b88-49c0-9738-66da141584b0)
   
-  8. Checked the Lazagne  processes details
+  8. Checked the Lazagne  processes details in timeline tab
 
    ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/e059dabf-a775-440c-aeb5-13adc21f4e6a)
 
@@ -80,7 +80,7 @@
 
       ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/973f182a-f732-4e88-ba09-fa8795c61780)
 
-  10. rule working Checked
+  10. rule working Checked (Copy and paste the test event section to check the rule working)
 
       ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/57c15ff5-aa8d-4d82-8aa7-8b235eca2c1b)
 
@@ -97,11 +97,11 @@
 
       ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/548d0864-0ca2-4f8d-94ff-05017ffed0e5)
 
- 14. Create story for webhook send detection setails to email
+ 14. Create story for webhook send detection setails to email (configure)
 
      ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/01e8e494-ab2e-4380-8ad8-9f163617d115)
 
-15. Check the Automation working
+15. Check the Automation working (hack tool ->detetion dule -> detection -> tines - > email)
 
     ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/349b1dcb-7c33-4e81-a950-5826312e4ced)
 
