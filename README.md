@@ -1,4 +1,143 @@
 # Limacharle-EDR-SOAR
 ## Overview
-In this project, I set up a Windows Server virtual machine equipped with the LimaCharlie agent to enhance endpoint detection capabilities. The primary objective was to create detection rule to  detect the LaZagne password-cracking tool within the VM environment and tines used to send detections details to security team via email .
+  In this project, I set up a Windows Server virtual machine equipped with the LimaCharlie agent to enhance endpoint detection capabilities. The primary objective was to create detection rule to  detect the LaZagne    password-cracking tool within the VM environment and tines used to send detections details to security team via email .
+
+## Environment Setup
+  1. Created windows server virtual machine in virtual box
+
+      ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/4bb4178e-e97b-4f6e-9c65-70fc8eaa7695)
+
+  2. Setup limacharle EDR and create installed keys for windows 64bit machine
+
+     ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/d1d8e6c0-2c0b-4363-a8bc-0e3e86d831f5)
+
+  3. Installed the LimaCharlie agent on the Windows Server virtual machine to enable real-time detection and monitoring
+
+     ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/af7e491e-c43f-4e6c-af82-13f08e82551a)
+
+  4. Checked the services wherther Limacharle is running
+
+     ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/a630e501-ed75-4791-922d-42786836925c)
+
+  5. Checked Virual machine status in Limacharle
+
+      ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/8ea0b4c5-3f24-42a1-b317-bafaf0971553)
+
+  6. Checked Virtual machine artifacts in Limacharle (click Sensor list -> windows server)
+
+     * Autoruns
+    
+       ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/46968894-c5e4-4bc4-b879-efdf4c29ae6d)
+
+     * Console
+
+       ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/58aea9bd-5b72-4640-bde2-28e20cee6cd3)
+
+     * Drivers
+
+       ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/4baa0fb7-1467-4021-8d47-45893db319f7)
+
+     * File System
+
+       ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/a089550f-4a1a-4eb0-9767-6ef9d40c739f)
+
+     * Network
+
+       ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/a5300458-3d3e-4d36-8ee0-f4bbbe2443b8)
+   
+   * Processes
+
+     ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/33afcefc-41da-48e4-a691-46d07159bc96)
+
+  * Services
+
+    ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/f3d8086d-4dca-4990-9c74-bf35ba78b842)
+
+ * Timeline
+
+   ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/996e93c0-f96e-4a51-857b-925723844c0a)
+
+ * Packages
+
+   ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/35740b36-1c20-43d5-b141-c98956b02ddf)
+
+* Analytics (View the number of events collected from this Sensor. Data is updated every ~15 minutes)
+
+  ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/5f947a9d-ce69-4444-808e-bef6674e7178)
+
+## Task Execution
+  7. Deployed and ran the LaZagne password-cracking tool within the VM to simulate a potential security threat.
+   
+   ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/1c8124cf-4b88-49c0-9738-66da141584b0)
+  
+  8. Checked the Lazagne  processes details
+
+   ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/e059dabf-a775-440c-aeb5-13adc21f4e6a)
+
+## Detection Rule Creation (Automation -> D&R rules -> New rule)
+
+  9. Developed a custom detection rule designed to identify the LaZagne tool based on its name and file hashes
+
+      ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/973f182a-f732-4e88-ba09-fa8795c61780)
+
+  10. rule working Checked
+
+      ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/57c15ff5-aa8d-4d82-8aa7-8b235eca2c1b)
+
+  11. Run the password craking tool to check whether detection rule is detecting
+
+      ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/becd31f3-89ec-4e57-a30a-ebf92d71982c)
+
+  ## Alert Integration
+  12. Utilized the Tines webhook to automatically send detailed detection alerts to email, ensuring timely notification and response to the detected threat.
+
+  ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/42d00286-b225-4824-98be-caf2f416feb6)
+
+  13. Enter the webhook URL to the Output section. this will copy the detection details and send it to tines
+
+      ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/548d0864-0ca2-4f8d-94ff-05017ffed0e5)
+
+ 14. Create story for webhook send detection setails to email
+
+     ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/01e8e494-ab2e-4380-8ad8-9f163617d115)
+
+15. Check the Automation working
+
+    ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/349b1dcb-7c33-4e81-a950-5826312e4ced)
+
+
+ 
+
+
+  
+
+
+
+      
+
+
+  
+
+  
+
+  
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+     
+     
+
 
