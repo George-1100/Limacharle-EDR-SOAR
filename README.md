@@ -99,11 +99,35 @@
 
  14. Create story for webhook send detection setails to email (configure)
 
-     ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/01e8e494-ab2e-4380-8ad8-9f163617d115)
-
+     [image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/ee8d9db4-8608-4927-ba0c-be7dac972de0)
+ 
 15. Check the Automation working (hack tool ->detetion dule -> detection -> tines - > email)
 
-    ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/349b1dcb-7c33-4e81-a950-5826312e4ced)
+      ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/91593746-7ce4-46cd-994f-0124e6df4ed7)
+
+    ## Play book creation (SOAR)
+
+16 . Created web page in tines and it has Yes/NO option for Isolate the machine
+
+   ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/829fd527-2db6-4f0d-813b-8a3631d0e9a0)
+
+   ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/6b39f765-d074-452a-a1ae-94f6e495f777)
+
+   17.If user selection is No means no action tacken.
+   18. If Yes, triggered action to sent a HTTP request for Isolate the machine (Created and conected with Limacharle creaticials in tines with using limacharle organization API)
+
+   ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/0e11ac1d-8dac-45d0-bae4-17eb869ffd7a)
+
+   ![image](https://github.com/George-1100/Limacharle-EDR-SOAR/assets/76154087/1a4b6e3e-59d6-4831-9cb5-71d7f2fa600d)
+
+19. The machine has been automatically isolated fom the network
+
+    ![image](https://github.com/user-attachments/assets/8335520d-f28b-4868-9f91-a5f7982897fb)
+
+
+
+
+    
 
 
  
