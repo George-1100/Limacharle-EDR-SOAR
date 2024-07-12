@@ -1,6 +1,9 @@
 # Limacharle-EDR-SOAR
 ## Overview
-  In this project, I set up a Windows Server virtual machine equipped with the LimaCharlie agent to enhance endpoint detection capabilities. The primary objective was to create detection rule to  detect the LaZagne    password-cracking tool within the VM environment and tines used to send detections details to security team via email .
+In this project, I set up a Windows Server virtual machine equipped with the LimaCharlie agent to enhance endpoint detection capabilities. The primary objective was to create detection rule to detect the LaZagne password-cracking tool within the VM environment and tines used to send detections details to security team via email. Playbook craeated with using Liacharle API for isolate the machine
+
+## What is Limacharle
+real-time Endpoint Detection & Response (EDR) tool for desktops, servers, and cloud endpoints. 
 
 ## Environment Setup
   1. Created windows server virtual machine in virtual box
